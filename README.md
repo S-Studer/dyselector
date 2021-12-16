@@ -1,2 +1,4 @@
 # dyselector
-Eind opdracht - full stack web developer Bit Academy course
+Eindopdracht - full stack web developer Bit Academy course
+
+https://dyselector.netlify.app/
