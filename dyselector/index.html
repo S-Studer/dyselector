@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/nty6iep.css"> <!-- Custome font -->
+    <link rel="stylesheet" href="https://use.typekit.net/yhq5xxn.css"> <!-- Name font -->
+    <link rel="stylesheet" href="style.css">
+    <title>Dyselector</title>
+</head>
+<body>
+    <div class="header-landing"> 
+        <div class="container-landing">
+            <div class="item-landing">
+                <div class="dyselector">
+                    <span class="letter">D</span>
+                    <span class="letter">y</span>
+                    <span class="letter">s</span>
+                    <span class="letter">e</span>
+                    <span class="letter">l</span>
+                    <span class="letter">e</span>
+                    <span class="letter">c</span>
+                    <span class="letter">t</span>
+                    <span class="letter">o</span>
+                    <span class="letter">r</span>
+                </div>
+            </div>
+            <div class="item-landing">
+                <h1>Making reading accessible</h1>
+            </div>
+            <div class="item-landing">
+                <button class="button" id="getStarted" type="button" onclick="goTo()">Get started!</button>
+            </div>
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="container-content">
+            <div class="item-content">
+                <h4 id="step1">STEP 1</h4>
+            </div>
+            <div class="border"></div>
+            <div class="item-content">
+                <h2>Paste and submit your text below</h2>
+            </div>
+            <form>            
+                <textarea  class="paste-textfield" id="textinput" placeholder="Past your text here..." ></textarea><br>
+                <input class="button" type="button" id="textinputbutton" value="submit" style="float: right;">              
+            </form>
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="container-content">
+            <div class="item-content">
+                <h4 id="step2">STEP 2</h4>
+            </div>
+            <div class="item-content">
+                <div class="border"></div>
+            </div>
+            <div class="item-content">
+                <h2>Adjust and enjoy your text</h2>
+            </div>  
+        </div>  
+    </div>  
+    <div class="header-toolbar">
+        <div class="container-toolbar">
+            <div class="row-toolbar">
+                <select class="toolbar-button" id="font-family" onchange="changeFontFamily()" >
+                    <option value="">font</option>
+                    <option value="OpenDyslexia">openDyslexia</option>
+                    <option value="monospace">monospace</option>
+                    <option value="Arial">arial</option>
+                    <option value="Helvetica">helvetica</option>
+                    <option value="Tahoma">tahoma</option>
+                    <option value="Verdana">verdana</option>
+                </select>
+                <select class="toolbar-button" id="font-size" onchange="changeFontSize()">
+                    <option value="">size</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                    <option value="x-large">x-large</option>
+                    <option value="xx-large">xx-large</option>
+                    <option value="xxx-large">xxx-large</option>
+                </select>
+                <div class="color-swatch">                      
+                    <h3>text color</h3>
+                    <div class="color-input">
+                        <input type="color" id="colorInputColor" name="color" value="#1D1D1B" oninput="changeTextColor()">
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <h3>background color</h3>
+                    <div class="color-input">
+                        <input type="color" id="inputBackgroundColor" name="color" value="#FFFFFF" oninput="changeColorBackground()">
+                    </div>
+                </div>
+                    <div class="color-swatch">  
+                        <h3>reading ruler</h3>
+                        <input type="checkbox" id="myCheck" class="switch" onclick="addLineCursor()">
+                    </div>
+                </div>
+                <div class="row-toolbar">
+                    <div class="slider-element">
+                        <h3>word space</h3>   
+                        <input type="range" min="0.5" max="10" value="1" class="slider" step="0.5" id="word-spacing" oninput="changeWordSpacing()">
+                    </div>
+                    <div class="slider-element">
+                        <h3>line-height</h3>   
+                        <input type="range" min="1" max="7" value="1.5" class="slider" step="0.2" id="line-height" oninput="changeLineHeight()">
+                    </div>
+                    <div class="slider-element">
+                        <h3>canvas width</h3>   
+                        <input type="range" min="100" max="3000" value="750" class="slider" step="50" id="canvas-width" oninput="changeCanvasWidth()">
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+    <div id="outputField">
+        <div class="cursor">
+            <div class="hl">
+            </div>    
+        </div> 
+        <div id="outputContainer">
+            <p id="output"></p>
+        </div>
+    </div>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
